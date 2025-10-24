@@ -6,7 +6,7 @@ After submission, the system analyzes their answers, identifies the dominant dos
 
 Installation Steps
 
-1)Download and install XAMPP (or any PHP + MySQL server).
+1)Download and install XAMPP.
 
 2)Clone or download the repository:
 - https://github.com/Pinkesh2620/Indian_health
