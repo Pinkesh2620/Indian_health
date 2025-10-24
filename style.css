@@ -1,0 +1,239 @@
+/* =======================================================
+   SIMPLE CLEAN STYLES  – INDIAN HEALTH PROJECT
+   ======================================================= */
+
+/* ---------- Basic Colors ---------- */
+:root {
+    --bg-color: #0f1316;
+    --card-color: #1b2228;
+    --text-color: #e6edf3;
+    --muted-text: #9ba8b4;
+    --accent: #2dd4bf;    /* Teal */
+    --accent-dark: #1b9b8a;
+    --highlight: #f4a261; /* Saffron */
+  }
+  
+  /* ---------- Reset & Base ---------- */
+  * {
+    box-sizing: border-box;
+  }
+  
+  body {
+    margin: 0;
+    font-family: "Segoe UI", sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    line-height: 1.5;
+  }
+  
+  /* ---------- Navigation Bar ---------- */
+  .nav {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background-color: var(--card-color);
+    padding: 10px 20px;
+    border-bottom: 1px solid #2c3238;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  .nav a,
+  .nav .pill {
+    color: var(--text-color);
+    text-decoration: none;
+    margin-left: 10px;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: 0.3s;
+  }
+  
+  .nav a:hover,
+  .nav a.active {
+    background-color: #283038;
+  }
+  
+  .pill {
+    background-color: #2b323a;
+    font-weight: 600;
+    color: var(--muted-text);
+  }
+  
+  /* ---------- Containers & Cards ---------- */
+  .container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  
+  .card {
+    background-color: var(--card-color);
+    border-radius: 14px;
+    padding: 24px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* ---------- Headings & Text ---------- */
+  h1, h2, h3 {
+    margin: 0 0 10px;
+  }
+  
+  h1 {
+    font-size: 2rem;
+  }
+  
+  .muted {
+    color: var(--muted-text);
+  }
+  
+  /* ---------- Buttons ---------- */
+  .btn {
+    display: inline-block;
+    background-color: var(--accent);
+    color: #071013;
+    padding: 10px 18px;
+    border-radius: 10px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    transition: 0.2s ease;
+    cursor: pointer;
+  }
+  
+  .btn:hover {
+    background-color: var(--accent-dark);
+    color: white;
+  }
+  
+  .btn.secondary {
+    background-color: var(--highlight);
+    color: #071013;
+  }
+  
+  .btn.ghost {
+    background: transparent;
+    color: var(--text-color);
+    border: 1px solid #394046;
+  }
+  
+  /* ---------- Input Forms ---------- */
+  .form {
+    display: grid;
+    gap: 12px;
+  }
+  
+  .input label {
+    font-weight: 600;
+    margin-bottom: 4px;
+  }
+  
+  .input input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #3b434a;
+    background-color: #12181d;
+    color: var(--text-color);
+  }
+  
+  .input input:focus {
+    border-color: var(--accent);
+    outline: none;
+  }
+  
+  /* ---------- Quiz Page ---------- */
+  .progress {
+    height: 8px;
+    border-radius: 8px;
+    background-color: #2c3238;
+    margin-bottom: 10px;
+    overflow: hidden;
+  }
+  
+  .progress > div {
+    height: 100%;
+    background-color: var(--accent);
+    width: 0%;
+    transition: width 0.3s ease;
+  }
+  
+  .quiz-option {
+    display: block;
+    padding: 12px 14px;
+    background-color: #20262c;
+    border-radius: 10px;
+    border: 1px solid #30373f;
+    margin-bottom: 10px;
+    cursor: pointer;
+    transition: background 0.2s ease;
+  }
+  
+  .quiz-option:hover {
+    background-color: #263038;
+  }
+  
+  .quiz-option input {
+    margin-right: 8px;
+  }
+  
+  .quiz-option input:checked + span {
+    color: var(--accent);
+  }
+  
+  /* ---------- Tips / Result Cards ---------- */
+  .tip {
+    background-color: #1d252b;
+    border: 1px solid #2d343b;
+    padding: 14px;
+    border-radius: 10px;
+    margin-top: 10px;
+  }
+  
+  .tip strong {
+    color: var(--highlight);
+  }
+  
+  /* ---------- Grid (for Result Page) ---------- */
+  .result-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 20px;
+  }
+  
+  @media (max-width: 800px) {
+    .result-grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  /* ---------- Stats ---------- */
+  .stat {
+    display: inline-block;
+    background-color: #1c242a;
+    border: 1px solid #2c3238;
+    border-radius: 10px;
+    padding: 10px 14px;
+    min-width: 110px;
+    text-align: center;
+  }
+  
+  .stat .muted {
+    font-size: 0.9rem;
+  }
+  
+  .stat div {
+    font-weight: 700;
+    font-size: 1.1rem;
+  }
+  
+  /* ---------- Footer ---------- */
+  .footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--muted-text);
+    font-size: 0.9rem;
+    border-top: 1px solid #2a2f35;
+    margin-top: 40px;
+  }
+  
